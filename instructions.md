@@ -139,7 +139,7 @@ curl -X POST 'http://localhost:9200/_snapshot/fs-chef-automate/export_1?wait_for
 sudo chown elasticsearch /tmp/elasticsearch_backups/ -R
 ```
 
-4. Add the following line to `/etc/elasticsearch/elasticsearch.yml` to create allow Elasticsearch snapshot imports from this directory:
+4. Add the following line to `/etc/elasticsearch/elasticsearch.yml` to allow Elasticsearch snapshot imports from this directory:
 
 ```
 node.repo: /tmp/elasticsearch_backups
