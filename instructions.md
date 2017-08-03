@@ -346,4 +346,11 @@ You should receive JSON output that states the transaction was successful:
   sudo automate-ctl reconfigure
   ```
 
-Note: The RabbitMQ tuning commands did not work in CentOS 7.
+5. Cap the RabbitMQ queue to 100,000 with the following steps:
+
+  Note: you may have to elevate to the root user (i.e. `su root`) or log in as root in order for these to complete properly.
+
+  ```
+  export PATH=/opt/delivery/embedded/bin:$PATH 
+  rabbitmqctl set_policy -p /insights max_length '(data-collector)' '{"max-length":100000}' --apply-to queues
+  ```
