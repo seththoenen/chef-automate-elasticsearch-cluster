@@ -73,13 +73,13 @@ For each Elasticsearch cluster node, do the following:
 sudo yum install java-1.8.0-openjdk.x86_64 1:1.8.0.141-1.b16.el7_3
 ```
 
-2. Download Elasticsearch 5.1.4:
+2. Download Elasticsearch 5.4.1:
 
 ```
 sudo wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.4.1.rpm --no-check-certificate
 ```
 
-3. Install Elasticsearch 5.1.4:
+3. Install Elasticsearch 5.4.1:
 
 ```
 sudo rpm --install elasticsearch-5.4.1.rpm
