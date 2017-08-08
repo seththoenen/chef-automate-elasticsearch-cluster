@@ -53,7 +53,7 @@ scsi_mod.use_blk_mq=Y elevator=noop transparent_hugepage=never
 
 ```
 vm.swappiness=10
-vm.max_map_count=256000
+vm.max_map_count=262144
 vm.dirty_ratio=20
 vm.dirty_background_ratio=30
 vm.dirty_expire_centisecs=30000 
