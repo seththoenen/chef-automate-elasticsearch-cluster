@@ -169,10 +169,10 @@ You should get an acknowledged JSON:
 curl -X POST 'http://localhost:9200/_snapshot/fs-chef-automate/export_1/_restore'
 ```
 
-You should get an acknowledged JSON:
+You should get an accepted JSON:
 
 ```
-{"acknowledged":true}
+{"accepted":true}
 ```
 
 You should also see the newly imported indices with the following command:
