@@ -142,7 +142,7 @@ sudo chown elasticsearch /tmp/elasticsearch_backups/ -R
 4. Add the following line to `/etc/elasticsearch/elasticsearch.yml` to allow Elasticsearch snapshot imports from this directory:
 
 ```
-node.repo: /tmp/elasticsearch_backups
+path.repo: /tmp/elasticsearch_backups
 ```
 
 5. Restart the elasticsearch service to load the new configuration:
@@ -189,7 +189,7 @@ curl -X GET 'http://localhost:9200/_cat/indices'
   curl -X DELETE 'http://localhost:9200/_snapshot/fs-chef-automate'
   ```
 
-  2. Remove the `node.repo` line from `/etc/elasticsearch.elasticsearch.yml`.
+  2. Remove the `path.repo` line from `/etc/elasticsearch.elasticsearch.yml`.
 
 
 ## Part 5 - Configure Elasticsearch Cluster
