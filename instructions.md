@@ -39,7 +39,7 @@ For each system (Chef Automate and the Elasticsearch cluster nodes), do the foll
 1. Set SELinux to permissive
 
 ```
-Setenforce 0
+setenforce 0
 sed -i 's/SELINUX=enforcing/SELINUX=permissive/g' /etc/selinux/config
 ```
 
