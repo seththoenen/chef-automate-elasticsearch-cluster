@@ -297,7 +297,7 @@ curl -X GET 'http://localhost:9200/_cat/indices'
 ```
 elasticsearch['urls'] = ['http://10.1.1.1:9200', 'http://10.1.1.2:9200', 'http://10.1.1.3:9200']
 ```
-2. Disable the local Elasticsearch instance with the followign command:
+2. Disable the local Elasticsearch instance with the following command:
 
 ```
 sudo automate-ctl stop elasticsearch
