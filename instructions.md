@@ -135,6 +135,12 @@ If you have a new Chef Automate instance and don't have any data, you may skip t
 
 2. Copy the backup files that were generated in `/var/opt/delivery/elasticsearch_backups/` to one of your Elasticsearch cluster nodes. For this tutorial, I've placed them in a new folder in `/tmp/elasticsearch_backups/`. Perform the rest of this section on one Elasticsearch node only.
 
+    You can use scp to copy the elasticsearch data with the following command:
+
+    ```bash
+    scp -r /var/opt/delivery/elasticsearch_backups/ [YOUR_USER_NAME]@[IP_ADDRESS_OF_CLUSTER_NODE]:/tmp/ 
+    ```
+
 3. Change ownership of all of the files in `/tmp/elastcsearch_backups/` to be owned by the `elasticsearch` user:
 
     ```bash
