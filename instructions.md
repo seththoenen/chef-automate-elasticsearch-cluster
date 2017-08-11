@@ -340,12 +340,6 @@ For each Elasticsearch cluster nodes, do the following:
         }
         ```
 
-    3. Reconfigure Chef Automate
-
-        ```bash
-        sudo automate-ctl reconfigure
-        ```
-
 5. Cap the RabbitMQ queue to 100,000 with the following steps:
 
     Note: you may have to elevate to the root user (i.e. `su root`) or log in as root in order for these to complete properly.
@@ -353,4 +347,10 @@ For each Elasticsearch cluster nodes, do the following:
     ```bash
     export PATH=/opt/delivery/embedded/bin:$PATH 
     rabbitmqctl set_policy -p /insights max_length '(data-collector)' '{"max-length":100000}' --apply-to queues
+    ```
+
+6. Reconfigure Chef Automate
+
+    ```bash
+    sudo automate-ctl reconfigure
     ```
