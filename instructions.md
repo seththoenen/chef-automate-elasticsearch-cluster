@@ -312,7 +312,8 @@ For each Elasticsearch cluster nodes, do the following:
 3. Update the shared count to the number of Elasticsearch cluster nodes:
 
     ```bash
-    curl ­XPUT http://localhost:8080/elasticsearch/_template/index_defaults ­d '{"template": "*", "settings": { "number_of_shards": 3}}'
+    curl ­XPUT http://localhost:8080/elasticsearch/_template/index_defaults -­d '{"template": "*", "settings": { "number_of_shards": 3}}'
+
     ```
 
     You should receive JSON output that states the transaction was successful:
