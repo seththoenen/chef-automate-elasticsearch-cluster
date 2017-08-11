@@ -29,7 +29,9 @@ Assumptions for this tutorial:
 The three nodes in this tutorial have the following name and IP address:
 
 chefels01 - 10.1.1.1
+
 chefels02 - 10.1.1.2
+
 chefels03 - 10.1.1.3
 
 ## Part 2 - Tune All Linux Systems
