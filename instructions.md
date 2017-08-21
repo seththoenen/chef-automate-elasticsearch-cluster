@@ -309,7 +309,13 @@ For each Elasticsearch cluster nodes, do the following:
     sudo automate-ctl stop elasticsearch
     ```
 
-3. Update the shared count to the number of Elasticsearch cluster nodes:
+3. Reconfigure Chef Automate
+
+    ```bash
+    sudo automate-ctl reconfigure
+    ```
+
+4. Update the shared count to the number of Elasticsearch cluster nodes:
 
     ```bash
     curl -XPUT http://localhost:8080/elasticsearch/_template/index_defaults -d '{"template": "*", "settings": {"number_of_shards": 3}}'
@@ -322,7 +328,7 @@ For each Elasticsearch cluster nodes, do the following:
     {"acknowledged":true}
     ```
 
-4. Tune LogStash
+5. Tune LogStash
 
     1. Create a file at `/etc/security/limits.d/90-chef-performance.conf` to configure limits tuning:
 
@@ -347,17 +353,11 @@ For each Elasticsearch cluster nodes, do the following:
         }
         ```
 
-5. Cap the RabbitMQ queue to 100,000 with the following steps:
+6. Cap the RabbitMQ queue to 100,000 with the following steps:
 
     Note: you may have to elevate to the root user (i.e. `su root`) or log in as root in order for these to complete properly.
 
     ```bash
     export PATH=/opt/delivery/embedded/bin:$PATH 
     rabbitmqctl set_policy -p /insights max_length '(data-collector)' '{"max-length":100000}' --apply-to queues
-    ```
-
-6. Reconfigure Chef Automate
-
-    ```bash
-    sudo automate-ctl reconfigure
     ```
